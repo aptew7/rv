@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setInitialData(){
         for (int i=1; i<33; ++i){
-            lines.add(new Line (" --- " + i +" --- ", R.drawable.plus));
+            lines.add(new Line (" --- " + i +" --- ", R.drawable.favourite));
         }
     }
 }
