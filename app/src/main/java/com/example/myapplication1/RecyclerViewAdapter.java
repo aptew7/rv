@@ -30,8 +30,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         final Model model = mModelList.get(position);
         holder.textView.setText(model.getText());
+        holder.textView2.setText(model.getText());
+        holder.textView3.setText(model.getText());
+        holder.textView4.setText(model.getText());
         holder.view.setBackgroundColor(model.isSelected() ? Color.argb(100,100,181,246) : Color.WHITE);
-        holder.textView.setOnClickListener(new View.OnClickListener() {
+        holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 model.setSelected(!model.isSelected());
@@ -49,11 +52,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         private View view;
         private TextView textView;
+        private TextView textView2;
+        private TextView textView3;
+        private TextView textView4;
 
         private MyViewHolder(View itemView) {
             super(itemView);
             view = itemView;
             textView = (TextView) itemView.findViewById(R.id.text_view);
+            textView2 = (TextView) itemView.findViewById(R.id.text_view2);
+            textView3 = (TextView) itemView.findViewById(R.id.text_view3);
+            textView4 = (TextView) itemView.findViewById(R.id.text_view4);
         }
     }
 }

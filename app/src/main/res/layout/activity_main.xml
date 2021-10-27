@@ -5,9 +5,28 @@
     android:layout_height="match_parent"
     android:background="#EEE">
 
+    <Button
+        android:layout_width="76dp"
+        android:layout_height="88dp"
+        android:id="@+id/b2"
+        android:layout_marginStart="5dp"
+        android:text="Dates"
+        android:backgroundTint="#7986CB"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="76dp"
+        android:layout_height="88dp"
+        android:id="@+id/b2"
+        android:layout_marginStart="90dp"
+        android:text="Tags"
+        android:backgroundTint="#AED581"
+        android:textAllCaps="false"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp" />
 
 </RelativeLayout>
