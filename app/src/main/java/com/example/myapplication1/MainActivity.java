@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Model> getListData() {
         mModelList = new ArrayList<>();
-        for (int i = 1; i <= 25; i++) {
+        for (int i = 1; i <= 99; i++) {
             mModelList.add(new Model("TextView " + i));
         }
         return mModelList;
