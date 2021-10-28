@@ -1,6 +1,8 @@
 package com.example.myapplication1;
 
+import android.os.Build;
 import android.os.Bundle;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Model> getListData() {
         mModelList = new ArrayList<>();
-        for (int i = 1; i <= 99; i++) {
-            mModelList.add(new Model("TextView " + i));
+        for (int i = 1; i <= 33; i++) {
+            mModelList.add(new Model("TextView " + i, R.drawable.max_5));
         }
         return mModelList;
     }
