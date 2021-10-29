@@ -13,50 +13,53 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:orientation="vertical"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:layout_margin="8dp">
 
         <TextView
             android:id="@+id/text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="8dp"
             android:textStyle="bold"
-            android:textSize="12sp"
-            tools:text="TextView"/>
+            android:textSize="18sp"
+            tools:text="TextView"
+            android:textColor="#404040"/>
 
         <TextView
             android:id="@+id/text_view2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="15dp"
             android:textStyle="italic"
-            android:textSize="10sp"
-            tools:text="TextView"/>
+            android:textSize="12sp"
+            tools:text="TextView"
+            android:textColor="#A4A4A4"/>
 
         <TextView
             android:id="@+id/text_view3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="15dp"
             android:textStyle="italic"
-            android:textSize="10sp"
-            tools:text="TextView"/>
+            android:textSize="12sp"
+            tools:text="TextView"
+            android:textColor="#A4A4A4"/>
 
         <TextView
             android:id="@+id/text_view4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="15dp"
             android:textStyle="bold|italic"
-            android:textSize="10sp"
-            tools:text="TextView"/>
+            android:textSize="12sp"
+            tools:text="TextView"
+            android:textColor="#C4C4C4"/>
 
     </LinearLayout>
 
     <ImageView
-        android:layout_width="70dp"
+        android:layout_width="100dp"
         android:layout_height="match_parent"
         android:layout_gravity="right|center"
-        android:src="@drawable/max_5" />
+        android:layout_marginEnd="7dp"
+        android:src="@drawable/max_5"
+        android:id="@+id/iv"/>
 
 </LinearLayout>

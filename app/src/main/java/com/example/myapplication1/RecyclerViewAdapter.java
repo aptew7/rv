@@ -5,6 +5,7 @@ import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -33,12 +34,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.textView2.setText(model.getText());
         holder.textView3.setText(model.getText());
         holder.textView4.setText(model.getText());
-        holder.view.setBackgroundColor(model.isSelected() ? Color.argb(100,100,181,246) : Color.WHITE);
+        holder.imageView.setImageResource(model.getImage());
+        holder.view.setBackgroundColor(model.isSelected() ? Color.argb(100,200,200,200) : Color.WHITE);
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 model.setSelected(!model.isSelected());
-                holder.view.setBackgroundColor(model.isSelected() ? Color.argb(100,100,181,246) : Color.WHITE);
+                holder.view.setBackgroundColor(model.isSelected() ? Color.argb(100,200,200,200) : Color.WHITE);
             }
         });
     }
@@ -55,6 +57,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         private TextView textView2;
         private TextView textView3;
         private TextView textView4;
+        private ImageView imageView;
 
         private MyViewHolder(View itemView) {
             super(itemView);
@@ -63,6 +66,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             textView2 = (TextView) itemView.findViewById(R.id.text_view2);
             textView3 = (TextView) itemView.findViewById(R.id.text_view3);
             textView4 = (TextView) itemView.findViewById(R.id.text_view4);
+            imageView = (ImageView) itemView.findViewById(R.id.iv);
         }
     }
 }
